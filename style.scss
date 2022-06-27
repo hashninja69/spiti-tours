@@ -1,0 +1,391 @@
+// Gloabal CSS
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+// colors
+$navbar: #4079c996;
+$navbar-text:#000;
+$package:#0c0c0c29;
+$package-book-btn:#80808063;
+$footer:#80808026;
+$footer-text:#000;
+
+
+
+// Navigation
+header {
+    background: $navbar;
+    justify-content: space-between;
+    padding: 0 249px;
+
+    .logo {
+        width: 150px;
+    }
+
+    nav {
+        align-items: center;
+
+        .contact {
+            margin: 0 10px;
+            justify-content: center;
+
+            .contact-icon {
+                width: 24px;
+                margin-right: 8px;
+                padding-top: 7px;
+
+            }
+
+            .p {
+                margin-right: 2px;
+            }
+
+            a {
+                color: $navbar-text;
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+
+
+// HomeSection
+.homeSection::before {
+    content: '';
+    background: url(./images/home-back.jpg);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.homeSection {
+    height: 624px;
+
+    .homeSection-left {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 45px;
+            color: white;
+            letter-spacing: 3px;
+        }
+
+        h3 {
+            color: gold;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 24px;
+            background: #f5deb370;
+        }
+    }
+
+    .homeSection-right {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            letter-spacing: 1.5;
+        }
+
+        .form-control {
+            margin: 15px 0px;
+
+            input,
+            select {
+                width: 250px;
+                height: 30px;
+                text-align: center;
+                width: 250px;
+                height: 30px;
+                text-align: center;
+                border-radius: 12px;
+                border: none;
+            }
+
+            button {
+                margin: 0 67px;
+                width: 116px;
+                height: 30px;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.packages {
+    h2 {
+        text-align: center;
+        margin: 66px 0px;
+        font-size: 41px;
+    }
+
+    .row {
+        justify-content: center;
+        margin: 50px 0;
+
+        .column {
+            margin: 0 10px;
+            background-color: $package;
+            flex-direction: column;
+            width: 500px;
+            align-items: center;
+            justify-content: center;
+            height: 510px;
+            border-radius: 12px;
+
+            .image {
+                width: 450px;
+
+                img {
+                    border-radius: 12px;
+                }
+            }
+
+            .details {
+
+                h3,
+                h6,
+                h5,
+                p {
+                    line-height: 1.8;
+                }
+
+                h3 {
+                    font-size: 30px;
+                }
+
+                h6 {
+                    font-size: 17px;
+                }
+
+                h5 {
+                    font-size: 17px;
+                }
+
+                p {
+                    font-size: 15px;
+                    letter-spacing: 1.5;
+                }
+
+                button {
+                    height: 32px;
+                    width: 87px;
+                    border-radius: 12px;
+                    border: none;
+                    background: $package-book-btn;
+                    &:hover{
+                        transform: scale(1.1);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.heading-align {
+    text-align: center;
+    margin: 67px 0px;
+}
+
+.whyUs {
+    justify-content: center;
+
+
+    .w-column {
+        flex-direction: column;
+        width: 205px;
+        align-items: center;
+        margin: 0 10px;
+        border-right: 1px solid black;
+
+        .whyUS-img {
+            width: 55px;
+        }
+
+        .w-content {
+            text-align: center;
+        }
+    }
+}
+
+.w-button {
+    justify-content: center;
+    margin-top: 70px;
+
+    button {
+        width: 311px;
+        height: 28px;
+        height: 36px;
+        border-radius: 12px;
+        border: none;
+        background: cadetblue;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+footer {
+    height: 400px;
+    background: $footer;
+    margin-top: 100px;
+    justify-content: space-around;
+    align-items: center;
+
+    .f-logo {
+        width: 200px;
+    }
+
+    .f-icon {
+        width: 35px;
+        margin-right: 15px;
+    }
+
+    .f-contact {
+        align-items: center;
+
+        a {
+            color: $footer-text;
+        }
+    }
+
+    .f-content {
+        width: 33%;
+
+    }
+}
+
+
+@media (max-width:900px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+
+        .logo {
+            margin: 0 auto;
+        }
+
+        nav {
+            flex-direction: column;
+
+            .contact {
+                a {
+                    font-size: 20px;
+                }
+
+                .contact-icon {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .homeSection::before {
+        content: '';
+        background: url(./images/home-mobile-back.jpg);
+        background-size: cover;
+        background-position: bottom;
+        height: 107vh;
+    }
+
+    .homeSection {
+        flex-direction: column;
+        align-items: center;
+
+        .homeSection-left {
+            h1 {
+                font-size: 34px;
+                text-align: center;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+
+    .packages {
+        .row {
+            flex-direction: column;
+            align-items: center;
+
+            .column {
+                width: 300px;
+                margin: 20px 0;
+
+                .image {
+                    width: 285px;
+                }
+            }
+        }
+    }
+
+    .whyUs {
+        flex-direction: column;
+        align-items: center;
+
+        .w-column {
+            border: none;
+            margin: 20px 0px;
+        }
+    }
+
+    footer {
+        height: 610px;
+        flex-direction: column;
+
+        .f-content {
+            text-align: center;
+        }
+    }
+}
